@@ -1,9 +1,15 @@
+import { useState } from "react";
 import "./App.css";
 import { FinalScreen } from "./components/finalScreen";
+import { GameScreen } from "./components/gameScreen";
 export function App() {
-  return (
+  let timerValue = 1000;
+  const [timer, setTimer] = useState(timerValue);
+  return timer > 0 ? (
     <>
-      <FinalScreen />
+      <GameScreen timer={timer} setTimer={setTimer} />
     </>
+  ) : (
+    <FinalScreen />
   );
 }

@@ -1,9 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
-export function Timer() {
-  let timerValue = 113;
-  const [timer, setTimer] = useState(timerValue);
-
+export function Timer({ timer, setTimer }) {
   useEffect(() => {
     function reverseTimer() {
       setTimer((prevTimer) => prevTimer - 1);
