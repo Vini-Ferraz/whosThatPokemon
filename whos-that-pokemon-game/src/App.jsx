@@ -1,14 +1,10 @@
 import "./App.css";
-import { Timer } from "./components/timer";
-import { ScoreSystem } from "./components/score";
-import { GetPokemonInfo } from "./components/pokemonInfo";
+import { MenuScreen } from "./components/menuScreen";
 
 export function App() {
   return (
     <>
-      <Timer />
-      <ScoreSystem />
-      <GetPokemonInfo />;
+      <MenuScreen />
     </>
   );
 }
