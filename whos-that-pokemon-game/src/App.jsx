@@ -1,10 +1,9 @@
 import "./App.css";
-import { MenuScreen } from "./components/menuScreen";
-
+import { FinalScreen } from "./components/finalScreen";
 export function App() {
   return (
     <>
-      <MenuScreen />
+      <FinalScreen />
     </>
   );
 }
