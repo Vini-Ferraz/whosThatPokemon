@@ -1,8 +1,7 @@
-export function Scores() {
+export function Scores({ score }) {
   return (
     <>
-      <p>Best Score: 1200</p>
-      <p>Final Score: 500</p>
+      <p>Final Score: {score}</p>
     </>
   );
 }
