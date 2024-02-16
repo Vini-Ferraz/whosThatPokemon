@@ -36,7 +36,7 @@ export function App() {
         </>
       );
     } else {
-      return <FinalScreen score={score} />;
+      return <FinalScreen score={score} setMenuState={setMenuState} />;
     }
   }
 }

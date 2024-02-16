@@ -1,7 +1,7 @@
-export function Options() {
+export function Options({ setMenuState }) {
   return (
     <>
-      <button>Main Menu</button>
+      <button onClick={() => setMenuState(true)}>Main Menu</button>
       <button>Play Again</button>
     </>
   );
