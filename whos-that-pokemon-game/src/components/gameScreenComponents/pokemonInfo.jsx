@@ -6,6 +6,7 @@ export function GetPokemonInfo({
   setPokemonName,
   answearState,
   setAnswearState,
+  blurTimer,
 }) {
   const [randomNumber, setRandomNumber] = useState("");
   const [blurValue, setBlurValue] = useState(null);
@@ -37,7 +38,7 @@ export function GetPokemonInfo({
         let pokemonImagePlace = document.getElementById("pokemonImageTag");
         const pokemonImg = data.sprites.other["official-artwork"].front_default;
         pokemonImagePlace.src = pokemonImg;
-        setBlurValue(64);
+        setBlurValue(128);
         setAnswearState(false);
       });
   }
@@ -50,7 +51,7 @@ export function GetPokemonInfo({
   }
 
   useEffect(() => {
-    setInterval(lessBlur, 5000);
+    setInterval(lessBlur, blurTimer);
   }, []);
 
   useEffect(() => {
