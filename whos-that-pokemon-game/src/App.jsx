@@ -10,6 +10,7 @@ export function App() {
   const [menuState, setMenuState] = useState(true);
   const [blurTimer, setBlurTimerValue] = useState(null);
   const [skipState, setSkipState] = useState(null);
+  const [randomPokemonRange, setRandomPokemonRange] = useState(null);
 
   if (menuState) {
     return (
@@ -19,6 +20,7 @@ export function App() {
           setTimer={setTimer}
           setMenuState={setMenuState}
           setBlurTimerValue={setBlurTimerValue}
+          setRandomPokemonRange={setRandomPokemonRange}
         />
       </>
     );
@@ -35,6 +37,7 @@ export function App() {
             blurTimer={blurTimer}
             skipState={skipState}
             setSkipState={setSkipState}
+            randomPokemonRange={randomPokemonRange}
           />
         </>
       );

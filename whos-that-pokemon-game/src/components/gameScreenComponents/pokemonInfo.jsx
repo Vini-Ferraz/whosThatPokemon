@@ -9,12 +9,13 @@ export function GetPokemonInfo({
   blurTimer,
   skipState,
   setSkipState,
+  randomPokemonRange,
 }) {
   const [randomNumber, setRandomNumber] = useState("");
   const [blurValue, setBlurValue] = useState(null);
   const url = "https://pokeapi.co/api/v2/pokemon/";
   function getRandomNumber() {
-    const newNumber = Math.floor(Math.random() * 889) + 1;
+    const newNumber = Math.floor(Math.random() * randomPokemonRange) + 1;
     setRandomNumber(newNumber);
     return newNumber;
   }

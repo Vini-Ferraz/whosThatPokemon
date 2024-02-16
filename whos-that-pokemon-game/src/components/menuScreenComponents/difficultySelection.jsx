@@ -2,16 +2,20 @@ export function DifficultyOptions({
   setTimer,
   setMenuState,
   setBlurTimerValue,
+  setRandomPokemonRange,
 }) {
   function pickDiff(arg) {
     if (arg == "easy") {
       setTimer(60);
+      setRandomPokemonRange(151);
       setBlurTimerValue(3000);
     } else if (arg == "normal") {
       setTimer(45);
+      setRandomPokemonRange(389);
       setBlurTimerValue(4000);
     } else if (arg == "hard") {
       setTimer(30);
+      setRandomPokemonRange(800);
       setBlurTimerValue(5000);
     }
   }

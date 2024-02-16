@@ -14,6 +14,7 @@ export function GameScreen({
   setBlurTimerValue,
   skipState,
   setSkipState,
+  randomPokemonRange,
 }) {
   const [answear, setAnswear] = useState("");
   const [pokemonName, setPokemonName] = useState("");
@@ -34,6 +35,7 @@ export function GameScreen({
         setBlurTimerValue={setBlurTimerValue}
         skipState={skipState}
         setSkipState={setSkipState}
+        randomPokemonRange={randomPokemonRange}
       />
       <UserOptions
         answear={answear}

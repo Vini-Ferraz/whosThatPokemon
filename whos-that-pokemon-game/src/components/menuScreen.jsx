@@ -7,6 +7,7 @@ export function MenuScreen({
   setTimer,
   setMenuState,
   setBlurTimerValue,
+  setRandomPokemonRange,
 }) {
   return (
     <>
@@ -16,6 +17,7 @@ export function MenuScreen({
         setTimer={setTimer}
         setMenuState={setMenuState}
         setBlurTimerValue={setBlurTimerValue}
+        setRandomPokemonRange={setRandomPokemonRange}
       />
       <Credits />
     </>
