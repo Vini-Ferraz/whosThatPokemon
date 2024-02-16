@@ -12,7 +12,7 @@ export function DifficultyOptions({
       setBlurTimerValue(3000);
       setScore(0);
     } else if (arg == "normal") {
-      setTimer(45);
+      setTimer(4500);
       setRandomPokemonRange(389);
       setBlurTimerValue(4000);
       setScore(0);
@@ -24,7 +24,7 @@ export function DifficultyOptions({
     }
   }
   return (
-    <>
+    <div>
       <button
         onClick={() => {
           pickDiff("easy");
@@ -52,6 +52,6 @@ export function DifficultyOptions({
       >
         Hard
       </button>
-    </>
+    </div>
   );
 }

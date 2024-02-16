@@ -41,7 +41,7 @@ export function GetPokemonInfo({
         let pokemonImagePlace = document.getElementById("pokemonImageTag");
         const pokemonImg = data.sprites.other["official-artwork"].front_default;
         pokemonImagePlace.src = pokemonImg;
-        setBlurValue(128);
+        setBlurValue(50);
         setAnswearState(false);
       });
   }

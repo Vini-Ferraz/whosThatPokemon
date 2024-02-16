@@ -11,7 +11,7 @@ export function MenuScreen({
   setRandomPokemonRange,
 }) {
   return (
-    <>
+    <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen">
       <Title />
       <DifficultyOptions
         timer={timer}
@@ -22,6 +22,6 @@ export function MenuScreen({
         setRandomPokemonRange={setRandomPokemonRange}
       />
       <Credits />
-    </>
+    </div>
   );
 }

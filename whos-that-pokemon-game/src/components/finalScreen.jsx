@@ -5,9 +5,9 @@ export function FinalScreen({
   setMenuState = { setMenuState },
 }) {
   return (
-    <>
+    <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen">
       <Scores score={score} />
       <Options setMenuState={setMenuState} />
-    </>
+    </div>
   );
 }

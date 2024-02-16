@@ -20,7 +20,7 @@ export function GameScreen({
   const [pokemonName, setPokemonName] = useState("");
   const [answearState, setAnswearState] = useState(false);
   return (
-    <>
+    <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen">
       <Timer timer={timer} setTimer={setTimer} />
       <ScoreSystem score={score} />
       <GetPokemonInfo
@@ -45,6 +45,6 @@ export function GameScreen({
         setAnswearState={setAnswearState}
         setSkipState={setSkipState}
       />
-    </>
+    </div>
   );
 }
