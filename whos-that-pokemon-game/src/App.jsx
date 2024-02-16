@@ -18,6 +18,7 @@ export function App() {
         <MenuScreen
           timer={timer}
           setTimer={setTimer}
+          setScore={setScore}
           setMenuState={setMenuState}
           setBlurTimerValue={setBlurTimerValue}
           setRandomPokemonRange={setRandomPokemonRange}

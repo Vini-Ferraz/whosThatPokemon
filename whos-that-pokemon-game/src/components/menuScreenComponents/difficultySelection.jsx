@@ -1,5 +1,6 @@
 export function DifficultyOptions({
   setTimer,
+  setScore,
   setMenuState,
   setBlurTimerValue,
   setRandomPokemonRange,
@@ -9,14 +10,17 @@ export function DifficultyOptions({
       setTimer(60);
       setRandomPokemonRange(151);
       setBlurTimerValue(3000);
+      setScore(0);
     } else if (arg == "normal") {
       setTimer(45);
       setRandomPokemonRange(389);
       setBlurTimerValue(4000);
+      setScore(0);
     } else if (arg == "hard") {
       setTimer(30);
       setRandomPokemonRange(800);
       setBlurTimerValue(5000);
+      setScore(0);
     }
   }
   return (
@@ -26,6 +30,7 @@ export function DifficultyOptions({
           pickDiff("easy");
           setMenuState(false);
         }}
+        className="bg-gradient-to-b from-sky-500 to-sky-700"
       >
         Easy
       </button>
@@ -34,6 +39,7 @@ export function DifficultyOptions({
           pickDiff("normal");
           setMenuState(false);
         }}
+        className="bg-gradient-to-b from-sky-500 to-sky-700 mx-8"
       >
         Normal
       </button>
@@ -42,6 +48,7 @@ export function DifficultyOptions({
           pickDiff("hard");
           setMenuState(false);
         }}
+        className="bg-gradient-to-b from-sky-500 to-sky-700"
       >
         Hard
       </button>

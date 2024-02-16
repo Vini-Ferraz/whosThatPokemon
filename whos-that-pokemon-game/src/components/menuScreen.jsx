@@ -5,6 +5,7 @@ import { Credits } from "./menuScreenComponents/credits";
 export function MenuScreen({
   timer,
   setTimer,
+  setScore,
   setMenuState,
   setBlurTimerValue,
   setRandomPokemonRange,
@@ -15,6 +16,7 @@ export function MenuScreen({
       <DifficultyOptions
         timer={timer}
         setTimer={setTimer}
+        setScore={setScore}
         setMenuState={setMenuState}
         setBlurTimerValue={setBlurTimerValue}
         setRandomPokemonRange={setRandomPokemonRange}
