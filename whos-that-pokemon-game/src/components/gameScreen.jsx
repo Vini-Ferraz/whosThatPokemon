@@ -12,6 +12,8 @@ export function GameScreen({
   blurValue,
   blurTimer,
   setBlurTimerValue,
+  skipState,
+  setSkipState,
 }) {
   const [answear, setAnswear] = useState("");
   const [pokemonName, setPokemonName] = useState("");
@@ -30,6 +32,8 @@ export function GameScreen({
         blurValue={blurValue}
         blurTimer={blurTimer}
         setBlurTimerValue={setBlurTimerValue}
+        skipState={skipState}
+        setSkipState={setSkipState}
       />
       <UserOptions
         answear={answear}
@@ -37,6 +41,7 @@ export function GameScreen({
         pokemonName={pokemonName}
         answearState={answearState}
         setAnswearState={setAnswearState}
+        setSkipState={setSkipState}
       />
     </>
   );

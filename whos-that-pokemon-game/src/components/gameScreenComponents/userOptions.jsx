@@ -4,6 +4,7 @@ export function UserOptions({
   pokemonName,
   answearState,
   setAnswearState,
+  setSkipState,
 }) {
   function checkAnswear() {
     if (answear === pokemonName) {
@@ -21,7 +22,7 @@ export function UserOptions({
         value={answear}
         onChange={(e) => setAnswear(e.target.value)}
       />
-      <button>Skip</button>
+      <button onClick={() => setSkipState(true)}>Skip</button>
       <button onClick={checkAnswear}>Guess</button>
     </>
   );

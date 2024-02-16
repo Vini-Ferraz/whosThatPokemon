@@ -7,6 +7,8 @@ export function GetPokemonInfo({
   answearState,
   setAnswearState,
   blurTimer,
+  skipState,
+  setSkipState,
 }) {
   const [randomNumber, setRandomNumber] = useState("");
   const [blurValue, setBlurValue] = useState(null);
@@ -50,6 +52,13 @@ export function GetPokemonInfo({
     }
   }
 
+  function handleSkip() {
+    if (skipState) {
+      getPokemon();
+    }
+    setSkipState(false);
+  }
+
   useEffect(() => {
     setInterval(lessBlur, blurTimer);
   }, []);
@@ -62,6 +71,10 @@ export function GetPokemonInfo({
     getPokemon();
   }, []);
 
+  useEffect(() => {
+    handleSkip();
+  }, [skipState]);
+
   return (
     <div>
       <img
@@ -71,8 +84,6 @@ export function GetPokemonInfo({
         style={{ filter: `blur(${blurValue}px)` }}
       />
       <h1 id="pokemonNameTag">{pokemonName}</h1>
-      <button onClick={getPokemon}>Get Random Number</button>
-      <button onClick={lessBlur}>Mais nítida</button>
     </div>
   );
 }
