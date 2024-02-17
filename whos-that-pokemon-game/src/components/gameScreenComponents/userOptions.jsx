@@ -20,7 +20,7 @@ export function UserOptions({
         type="text"
         className="border-solid	border-2 border-red-600 rounded bg-cyan-700"
         value={answear}
-        onChange={(e) => setAnswear(e.target.value)}
+        onChange={(e) => setAnswear(e.target.value.toLocaleLowerCase())}
       />
       <button onClick={() => setSkipState(true)}>Skip</button>
       <button onClick={checkAnswear}>Guess</button>

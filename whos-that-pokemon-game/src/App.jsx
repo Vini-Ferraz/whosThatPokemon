@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { FinalScreen } from "./components/finalScreen";
 import { GameScreen } from "./components/gameScreen";
@@ -7,10 +7,17 @@ export function App() {
   let timerValue = 0;
   const [timer, setTimer] = useState(timerValue);
   const [score, setScore] = useState(0);
+  const [bestScore, setBestScore] = useState(0);
   const [menuState, setMenuState] = useState(true);
   const [blurTimer, setBlurTimerValue] = useState(null);
   const [skipState, setSkipState] = useState(null);
   const [randomPokemonRange, setRandomPokemonRange] = useState(null);
+
+  useEffect(() => {
+    if (score > bestScore) {
+      setBestScore(score);
+    }
+  }, [score]);
 
   if (menuState) {
     return (
@@ -45,7 +52,12 @@ export function App() {
     } else {
       return (
         <div className="text-slate-50">
-          <FinalScreen score={score} setMenuState={setMenuState} />
+          <FinalScreen
+            score={score}
+            setMenuState={setMenuState}
+            bestScore={bestScore}
+            setBestScore={setBestScore}
+          />
         </div>
       );
     }
