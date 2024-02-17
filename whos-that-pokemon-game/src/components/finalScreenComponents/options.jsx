@@ -6,9 +6,8 @@ export function Options({ setMenuState }) {
           setMenuState(true);
         }}
       >
-        Main Menu
+        Play Again
       </button>
-      <button>Play Again</button>
     </>
   );
 }

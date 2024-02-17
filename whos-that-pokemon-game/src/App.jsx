@@ -14,7 +14,7 @@ export function App() {
 
   if (menuState) {
     return (
-      <>
+      <div className="text-slate-50">
         <MenuScreen
           timer={timer}
           setTimer={setTimer}
@@ -23,12 +23,12 @@ export function App() {
           setBlurTimerValue={setBlurTimerValue}
           setRandomPokemonRange={setRandomPokemonRange}
         />
-      </>
+      </div>
     );
   } else {
     if (timer >= 0) {
       return (
-        <>
+        <div className="text-slate-50">
           <GameScreen
             timer={timer}
             setTimer={setTimer}
@@ -40,10 +40,14 @@ export function App() {
             setSkipState={setSkipState}
             randomPokemonRange={randomPokemonRange}
           />
-        </>
+        </div>
       );
     } else {
-      return <FinalScreen score={score} setMenuState={setMenuState} />;
+      return (
+        <div className="text-slate-50">
+          <FinalScreen score={score} setMenuState={setMenuState} />
+        </div>
+      );
     }
   }
 }

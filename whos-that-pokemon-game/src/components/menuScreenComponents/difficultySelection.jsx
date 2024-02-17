@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 export function DifficultyOptions({
   setTimer,
   setScore,
@@ -12,7 +14,7 @@ export function DifficultyOptions({
       setBlurTimerValue(3000);
       setScore(0);
     } else if (arg == "normal") {
-      setTimer(4500);
+      setTimer(45);
       setRandomPokemonRange(389);
       setBlurTimerValue(4000);
       setScore(0);
@@ -23,14 +25,15 @@ export function DifficultyOptions({
       setScore(0);
     }
   }
+
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <button
         onClick={() => {
           pickDiff("easy");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-700"
+        className="bg-gradient-to-b from-sky-500 to-sky-600 w-fit"
       >
         Easy
       </button>
@@ -39,7 +42,7 @@ export function DifficultyOptions({
           pickDiff("normal");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-700 mx-8"
+        className="bg-gradient-to-b from-sky-500 to-sky-600 w-fit"
       >
         Normal
       </button>
@@ -48,7 +51,7 @@ export function DifficultyOptions({
           pickDiff("hard");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-700"
+        className="bg-gradient-to-b from-sky-500 to-sky-600 w-fit"
       >
         Hard
       </button>
