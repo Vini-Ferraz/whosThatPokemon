@@ -1,3 +1,3 @@
 export function Credits() {
-  return <p>Created By Vini 2024</p>;
+  return <p className="text-xl">Created By Vini 2024</p>;
 }

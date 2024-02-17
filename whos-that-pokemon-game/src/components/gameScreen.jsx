@@ -20,31 +20,35 @@ export function GameScreen({
   const [pokemonName, setPokemonName] = useState("");
   const [answearState, setAnswearState] = useState(false);
   return (
-    <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen">
-      <Timer timer={timer} setTimer={setTimer} />
-      <ScoreSystem score={score} />
-      <GetPokemonInfo
-        setScore={setScore}
-        answear={answear}
-        pokemonName={pokemonName}
-        setPokemonName={setPokemonName}
-        answearState={answearState}
-        setAnswearState={setAnswearState}
-        blurValue={blurValue}
-        blurTimer={blurTimer}
-        setBlurTimerValue={setBlurTimerValue}
-        skipState={skipState}
-        setSkipState={setSkipState}
-        randomPokemonRange={randomPokemonRange}
-      />
-      <UserOptions
-        answear={answear}
-        setAnswear={setAnswear}
-        pokemonName={pokemonName}
-        answearState={answearState}
-        setAnswearState={setAnswearState}
-        setSkipState={setSkipState}
-      />
+    <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen flex justify-center">
+      <div className="w-11/12 h-screen flex flex-col justify-around">
+        <div className="flex flex-row-reverse	items-center justify-between">
+          <Timer timer={timer} setTimer={setTimer} />
+          <ScoreSystem score={score} />
+        </div>
+        <GetPokemonInfo
+          setScore={setScore}
+          answear={answear}
+          pokemonName={pokemonName}
+          setPokemonName={setPokemonName}
+          answearState={answearState}
+          setAnswearState={setAnswearState}
+          blurValue={blurValue}
+          blurTimer={blurTimer}
+          setBlurTimerValue={setBlurTimerValue}
+          skipState={skipState}
+          setSkipState={setSkipState}
+          randomPokemonRange={randomPokemonRange}
+        />
+        <UserOptions
+          answear={answear}
+          setAnswear={setAnswear}
+          pokemonName={pokemonName}
+          answearState={answearState}
+          setAnswearState={setAnswearState}
+          setSkipState={setSkipState}
+        />
+      </div>
     </div>
   );
 }

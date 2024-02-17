@@ -14,7 +14,7 @@ export function DifficultyOptions({
       setBlurTimerValue(3000);
       setScore(0);
     } else if (arg == "normal") {
-      setTimer(45);
+      setTimer(45000);
       setRandomPokemonRange(389);
       setBlurTimerValue(4000);
       setScore(0);
@@ -27,13 +27,13 @@ export function DifficultyOptions({
   }
 
   return (
-    <div className="flex flex-col justify-center items-center">
+    <div className="flex flex-col justify-center items-center text-4xl w-3/4">
       <button
         onClick={() => {
           pickDiff("easy");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-600 w-fit"
+        className="bg-gradient-to-b from-sky-500 to-sky-600 w-11/12 rounded-2xl m-3 py-1.5 shadow-md"
       >
         Easy
       </button>
@@ -42,7 +42,7 @@ export function DifficultyOptions({
           pickDiff("normal");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-600 w-fit"
+        className="bg-gradient-to-b from-sky-500 to-sky-600 w-11/12 rounded-2xl m-3 py-1.5 shadow-md"
       >
         Normal
       </button>
@@ -51,7 +51,7 @@ export function DifficultyOptions({
           pickDiff("hard");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-600 w-fit"
+        className="bg-gradient-to-b from-sky-500 to-sky-600 w-11/12 rounded-2xl m-3 py-1.5 shadow-md"
       >
         Hard
       </button>

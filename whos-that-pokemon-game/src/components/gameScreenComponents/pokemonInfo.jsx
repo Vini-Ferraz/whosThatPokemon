@@ -77,12 +77,13 @@ export function GetPokemonInfo({
   }, [skipState]);
 
   return (
-    <div>
+    <div className="flex items-center flex-col">
       <img
         id="pokemonImageTag"
         src=""
         alt="Pokémon Image"
         style={{ filter: `blur(${blurValue}px)` }}
+        className="w-2/3"
       />
       <h1 id="pokemonNameTag">{pokemonName}</h1>
     </div>

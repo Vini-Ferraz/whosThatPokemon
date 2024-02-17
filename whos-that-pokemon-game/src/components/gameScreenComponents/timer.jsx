@@ -9,5 +9,9 @@ export function Timer({ timer, setTimer }) {
     return () => clearTimeout(timerId);
   }, [timer]);
 
-  return <h1>{timer}</h1>;
+  if (timer < 10) {
+    return <h1 className="text-4xl">00:0{timer}</h1>;
+  } else {
+    return <h1 className="text-4xl">00:{timer}</h1>;
+  }
 }

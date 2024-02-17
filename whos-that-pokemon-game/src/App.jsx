@@ -21,7 +21,7 @@ export function App() {
 
   if (menuState) {
     return (
-      <div className="text-slate-50">
+      <div className="text-slate-50 font-concert">
         <MenuScreen
           timer={timer}
           setTimer={setTimer}
@@ -35,7 +35,7 @@ export function App() {
   } else {
     if (timer >= 0) {
       return (
-        <div className="text-slate-50">
+        <div className="text-slate-50 font-concert">
           <GameScreen
             timer={timer}
             setTimer={setTimer}
@@ -51,7 +51,7 @@ export function App() {
       );
     } else {
       return (
-        <div className="text-slate-50">
+        <div className="text-slate-50 font-concert">
           <FinalScreen
             score={score}
             setMenuState={setMenuState}

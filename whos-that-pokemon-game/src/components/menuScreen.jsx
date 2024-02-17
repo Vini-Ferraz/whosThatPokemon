@@ -12,16 +12,18 @@ export function MenuScreen({
 }) {
   return (
     <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen flex flex-col justify-center items-center">
-      <Title />
-      <DifficultyOptions
-        timer={timer}
-        setTimer={setTimer}
-        setScore={setScore}
-        setMenuState={setMenuState}
-        setBlurTimerValue={setBlurTimerValue}
-        setRandomPokemonRange={setRandomPokemonRange}
-      />
-      <Credits />
+      <div className="flex flex-col justify-around items-center	h-3/4">
+        <Title />
+        <DifficultyOptions
+          timer={timer}
+          setTimer={setTimer}
+          setScore={setScore}
+          setMenuState={setMenuState}
+          setBlurTimerValue={setBlurTimerValue}
+          setRandomPokemonRange={setRandomPokemonRange}
+        />
+        <Credits />
+      </div>
     </div>
   );
 }
