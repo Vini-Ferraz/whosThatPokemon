@@ -21,7 +21,7 @@ export function GameScreen({
   const [answearState, setAnswearState] = useState(false);
   return (
     <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen flex justify-center">
-      <div className="w-11/12 h-screen flex flex-col justify-around">
+      <div className="w-11/12 h-screen flex flex-col justify-around sm:w-9/12 lg:w-6/12">
         <div className="flex flex-row-reverse	items-center justify-between">
           <Timer timer={timer} setTimer={setTimer} />
           <ScoreSystem score={score} />

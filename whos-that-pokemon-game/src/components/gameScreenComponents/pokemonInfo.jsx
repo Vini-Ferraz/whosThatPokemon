@@ -83,9 +83,8 @@ export function GetPokemonInfo({
         src=""
         alt="Pokémon Image"
         style={{ filter: `blur(${blurValue}px)` }}
-        className="w-3/4"
+        className="w-3/4 md:w-2/4 lg:w-2/5"
       />
-      <h1 id="pokemonNameTag">{pokemonName}</h1>
     </div>
   );
 }

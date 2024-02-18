@@ -14,7 +14,7 @@ export function DifficultyOptions({
       setBlurTimerValue(3000);
       setScore(0);
     } else if (arg == "normal") {
-      setTimer(45000);
+      setTimer(45);
       setRandomPokemonRange(389);
       setBlurTimerValue(4000);
       setScore(0);

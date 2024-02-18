@@ -22,6 +22,7 @@ export function UserOptions({
         className="text-4xl w-3/4 bg-slate-200 text-gray-950 text-center rounded-2xl m-3 py-2 shadow-md"
         value={answear}
         spellCheck={false}
+        autoFocus={true}
         onChange={(e) => setAnswear(e.target.value.toLocaleLowerCase())}
       />
       <div className="flex justify-between w-3/4">
