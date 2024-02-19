@@ -80,7 +80,7 @@ export function GetPokemonInfo({
     <div className="flex items-center flex-col">
       <img
         id="pokemonImageTag"
-        src=""
+        src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/207.png"
         alt="Pokémon Image"
         style={{ filter: `blur(${blurValue}px)` }}
         className="w-3/4 md:w-2/4 lg:w-2/5"

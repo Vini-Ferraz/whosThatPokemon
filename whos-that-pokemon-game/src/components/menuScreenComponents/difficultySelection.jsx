@@ -33,7 +33,7 @@ export function DifficultyOptions({
           pickDiff("easy");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-600 w-11/12 rounded-2xl m-3 py-1.5 shadow-md"
+        className=" w-11/12 rounded-2xl m-3 py-1.5 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
         Easy
       </button>
@@ -42,7 +42,7 @@ export function DifficultyOptions({
           pickDiff("normal");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-600 w-11/12 rounded-2xl m-3 py-1.5 shadow-md"
+        className="w-11/12 rounded-2xl m-3 py-1.5 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
         Normal
       </button>
@@ -51,7 +51,7 @@ export function DifficultyOptions({
           pickDiff("hard");
           setMenuState(false);
         }}
-        className="bg-gradient-to-b from-sky-500 to-sky-600 w-11/12 rounded-2xl m-3 py-1.5 shadow-md"
+        className="w-11/12 rounded-2xl m-3 py-1.5 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
         Hard
       </button>
