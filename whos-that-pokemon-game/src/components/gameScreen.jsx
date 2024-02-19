@@ -1,3 +1,6 @@
+//A React component representing the main game screen.
+//It includes the game timer, score system, Pokemon information, and user options.
+
 import { useState } from "react";
 import { Timer } from "./gameScreenComponents/timer";
 import { ScoreSystem } from "./gameScreenComponents/score";

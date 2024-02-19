@@ -1,3 +1,6 @@
+//A React component to provide user input options for guessing the Pokemon name.
+//It includes an input field for user guesses and buttons for skipping or guessing.
+
 export function UserOptions({
   answear,
   setAnswear,
@@ -6,24 +9,29 @@ export function UserOptions({
   setAnswearState,
   setSkipState,
 }) {
+  //Function to remove the wrong input color class.
   function removeWrongInputColor() {
     let userInput = document.getElementById("answearInput");
     userInput.classList.remove("bg-red-500");
   }
+  //Function to apply the wrong input color class.
   function wrongInputColor() {
     let userInput = document.getElementById("answearInput");
     userInput.classList.add("bg-red-500");
     setTimeout(removeWrongInputColor, 375);
   }
+  //Function to remove the right input color class.
   function removeRightInputColor() {
     let userInput = document.getElementById("answearInput");
     userInput.classList.remove("bg-emerald-500");
   }
+  //Function to apply the right input color class.
   function rightInputColor() {
     let userInput = document.getElementById("answearInput");
     userInput.classList.add("bg-emerald-500");
     setTimeout(removeRightInputColor, 375);
   }
+  //Function to check the user's guess.
   function checkAnswear() {
     if (answear === pokemonName) {
       setAnswearState(true);
@@ -44,6 +52,7 @@ export function UserOptions({
         value={answear}
         spellCheck={false}
         autoFocus={true}
+        autoComplete="off"
         onChange={(e) => setAnswear(e.target.value.toLocaleLowerCase())}
       />
       <div className="flex justify-between w-3/4">

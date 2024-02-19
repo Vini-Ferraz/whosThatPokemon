@@ -1,3 +1,6 @@
+//A React component to display options for the user.
+//It includes a button to allow the user to play the game again.
+
 export function Options({ setMenuState }) {
   return (
     <div className="w-3/4 sm:w-2/4 md:w-2/6">

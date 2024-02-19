@@ -1,5 +1,4 @@
-import { useEffect } from "react";
-
+//A React component to display difficulty options for the game.
 export function DifficultyOptions({
   setTimer,
   setScore,
@@ -7,6 +6,7 @@ export function DifficultyOptions({
   setBlurTimerValue,
   setRandomPokemonRange,
 }) {
+  //Function to handle difficulty selection.
   function pickDiff(arg) {
     if (arg == "easy") {
       setTimer(60);

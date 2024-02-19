@@ -1,3 +1,6 @@
+//A React component representing the main menu screen of the game.
+//It includes the game title, difficulty options, and credits.
+
 import { Title } from "./menuScreenComponents/titleMenuScreen";
 import { DifficultyOptions } from "./menuScreenComponents/difficultySelection";
 import { Credits } from "./menuScreenComponents/credits";
