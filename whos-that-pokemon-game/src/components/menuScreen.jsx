@@ -14,7 +14,7 @@ export function MenuScreen({
   setRandomPokemonRange,
 }) {
   return (
-    <div className="bg-gradient-to-br	from-violet-500 to-red-500 h-screen flex flex-col justify-center items-center">
+    <div className="bg-gradient-to-t from-red-500 to-violet-500 h-screen flex flex-col justify-center items-center">
       <div className="flex flex-col justify-around items-center	h-3/4">
         <Title />
         <DifficultyOptions

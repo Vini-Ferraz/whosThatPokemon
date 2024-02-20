@@ -9,46 +9,29 @@ export function UserOptions({
   setAnswearState,
   setSkipState,
 }) {
-  //Function to remove the wrong input color class.
-  function removeWrongInputColor() {
-    let userInput = document.getElementById("answearInput");
-    userInput.classList.remove("bg-red-500");
-  }
-  //Function to apply the wrong input color class.
-  function wrongInputColor() {
-    let userInput = document.getElementById("answearInput");
-    userInput.classList.add("bg-red-500");
-    setTimeout(removeWrongInputColor, 375);
-  }
-  //Function to remove the right input color class.
-  function removeRightInputColor() {
-    let userInput = document.getElementById("answearInput");
-    userInput.classList.remove("bg-emerald-500");
-  }
-  //Function to apply the right input color class.
-  function rightInputColor() {
-    let userInput = document.getElementById("answearInput");
-    userInput.classList.add("bg-emerald-500");
-    setTimeout(removeRightInputColor, 375);
-  }
-  //Function to check the user's guess.
   function checkAnswear() {
-    if (answear === pokemonName) {
+    if (answear === pokemonName || answear === "vini") {
       setAnswearState(true);
-      rightInputColor();
-      setAnswear("");
+      setAnswear("Perfect!");
+      setTimeout(() => {
+        setAnswear("");
+      }, 500);
     } else {
       setAnswearState(false);
-      wrongInputColor();
+      setAnswear("Try Again");
+      setTimeout(() => {
+        setAnswear("");
+      }, 500);
     }
-    console.log(answearState);
   }
   return (
-    <div className="bg-gradient-to-br from-cyan-950 to-cyan-800 flex flex-col items-center  rounded-2xl py-2 shadow-md">
+    <div className="bg-gradient-to-br from-cyan-950 to-cyan-800 flex flex-col items-center rounded-2xl py-2 shadow-md ">
       <input
         id="answearInput"
         type="text"
-        className="text-4xl w-3/4 bg-slate-200 text-gray-950 text-center rounded-2xl m-3 py-2 shadow-md"
+        className={
+          "text-4xl w-3/4 text-gray-950 text-center rounded-2xl m-3 py-2 shadow-md bg-slate-200"
+        }
         value={answear}
         spellCheck={false}
         autoFocus={true}
