@@ -5,7 +5,6 @@ export function UserOptions({
   answear,
   setAnswear,
   pokemonName,
-  answearState,
   setAnswearState,
   setSkipState,
 }) {

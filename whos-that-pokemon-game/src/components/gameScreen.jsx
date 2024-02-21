@@ -47,7 +47,6 @@ export function GameScreen({
           answear={answear}
           setAnswear={setAnswear}
           pokemonName={pokemonName}
-          answearState={answearState}
           setAnswearState={setAnswearState}
           setSkipState={setSkipState}
         />

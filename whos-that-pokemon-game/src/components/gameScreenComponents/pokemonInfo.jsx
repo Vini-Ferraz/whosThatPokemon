@@ -29,7 +29,7 @@ export function GetPokemonInfo({
   }
   //Function to reduce the blur effect.
   function lessBlur() {
-    setBlurValue((prevBlurValue) => prevBlurValue / 2);
+    setBlurValue((prevBlurValue) => prevBlurValue / 4);
     return blurValue;
   }
   //Function to fetch a random Pokemon from the PokeAPI.
@@ -42,12 +42,11 @@ export function GetPokemonInfo({
       })
       .then((data) => {
         setPokemonName(data.name);
-        console.log(pokemonName);
 
         let pokemonImagePlace = document.getElementById("pokemonImageTag");
         const pokemonImg = data.sprites.other["official-artwork"].front_default;
         pokemonImagePlace.src = pokemonImg;
-        setBlurValue(64);
+        setBlurValue(50);
         setAnswearState(false);
       });
   }
