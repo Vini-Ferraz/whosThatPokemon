@@ -17,6 +17,6 @@ O jogo oferece três níveis de dificuldade: fácil, médio e difícil. Em cada 
 O jogo oferece as seguintes funcionalidades:
 
 - Seleção de nível de dificuldade: O jogador pode escolher entre os níveis fácil, médio e difícil.
-- Exibição de recordes: No final do jogo, o recorde atual do jogador e o recorde geral são exibidos.
+- Exibição de recordes: No final do jogo, o recorde atual do jogador e o recorde geral são exibidos
 
 Agradecemos por seu interesse em nosso projeto. Divirta-se jogando!
