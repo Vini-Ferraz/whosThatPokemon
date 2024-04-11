@@ -28,33 +28,33 @@ export function DifficultyOptions({
 
   return (
     <div className="flex flex-col justify-center items-center text-4xl w-3/4">
-      <button
+      <div
         onClick={() => {
           pickDiff("easy");
           setMenuState(false);
         }}
-        className="w-11/12 rounded-2xl m-3 h-14 text-center shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
+        className="w-11/12 rounded-2xl m-3 h-14 text-center shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center cursor-pointer	hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
         Easy
-      </button>
-      <button
+      </div>
+      <div
         onClick={() => {
           pickDiff("normal");
           setMenuState(false);
         }}
-        className="w-11/12 rounded-2xl m-3 h-14 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
+        className="w-11/12 rounded-2xl m-3 h-14 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center cursor-pointer hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
         Normal
-      </button>
-      <button
+      </div>
+      <div
         onClick={() => {
           pickDiff("hard");
           setMenuState(false);
         }}
-        className="w-11/12 rounded-2xl m-3 h-14 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
+        className="w-11/12 rounded-2xl m-3 h-14 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center cursor-pointer hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
         Hard
-      </button>
+      </div>
     </div>
   );
 }
