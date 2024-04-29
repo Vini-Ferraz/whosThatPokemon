@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        concert: ["Pixelify Sans", "sans-serif"],
+        mainFont: ["VT323", "monospace"],
       },
     },
   },
