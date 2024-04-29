@@ -1,4 +1,7 @@
 //A React component to display difficulty options for the game.
+import clickSom from "../../assets/EfeitosSonoros/click.mp3";
+const clickAudio = new Audio(clickSom);
+
 export function DifficultyOptions({
   setTimer,
   setScore,
@@ -32,6 +35,7 @@ export function DifficultyOptions({
         onClick={() => {
           pickDiff("easy");
           setMenuState(false);
+          clickAudio.play();
         }}
         className="w-11/12 rounded-2xl m-3 h-14 text-center shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center cursor-pointer	hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
@@ -41,6 +45,7 @@ export function DifficultyOptions({
         onClick={() => {
           pickDiff("normal");
           setMenuState(false);
+          clickAudio.play();
         }}
         className="w-11/12 rounded-2xl m-3 h-14 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center cursor-pointer hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >
@@ -50,6 +55,7 @@ export function DifficultyOptions({
         onClick={() => {
           pickDiff("hard");
           setMenuState(false);
+          clickAudio.play();
         }}
         className="w-11/12 rounded-2xl m-3 h-14 shadow-md bg-gradient-to-b from-sky-500 to-sky-600 flex justify-center items-center cursor-pointer hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-600 active:bg-gradient-to-b active:from-emerald-500 active:to-emerald-600"
       >

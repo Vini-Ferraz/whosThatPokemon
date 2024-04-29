@@ -1,5 +1,7 @@
 //A React component to provide user input options for guessing the Pokemon name.
 //It includes an input field for user guesses and buttons for skipping or guessing.
+import respostaErradaSom from "../../assets/EfeitosSonoros/resposta-errada.mp3";
+const respostaErradaAudio = new Audio(respostaErradaSom);
 
 export function UserOptions({
   answear,
@@ -21,6 +23,7 @@ export function UserOptions({
       setTimeout(() => {
         setAnswear("");
       }, 500);
+      respostaErradaAudio.play();
     }
   }
   return (

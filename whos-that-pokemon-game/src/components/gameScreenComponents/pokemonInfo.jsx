@@ -2,6 +2,10 @@
 //It fetches a random Pokemon from the PokeAPI and displays its name and image.
 
 import { useState, useEffect } from "react";
+import clickSom from "../../assets/EfeitosSonoros/click.mp3";
+const clickAudio = new Audio(clickSom);
+import respostaCorretaSom from "../../assets/EfeitosSonoros/resposta-certa.mp3";
+const respostaCorretaAudio = new Audio(respostaCorretaSom);
 
 export function GetPokemonInfo({
   setScore,
@@ -55,12 +59,14 @@ export function GetPokemonInfo({
     if (answearState) {
       winPoints();
       getPokemon();
+      respostaCorretaAudio.play();
     }
   }
   //Function to handle skipping the current Pokemon.
   function handleSkip() {
     if (skipState) {
       getPokemon();
+      clickAudio.play();
     }
     setSkipState(false);
   }
