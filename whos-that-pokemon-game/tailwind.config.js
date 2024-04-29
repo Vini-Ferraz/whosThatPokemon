@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        concert: ["Concert One", "sans-serif"],
+        concert: ["Pixelify Sans", "sans-serif"],
       },
     },
   },
