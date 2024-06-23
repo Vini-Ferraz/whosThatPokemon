@@ -3,6 +3,10 @@ import "./App.css";
 import { FinalScreen } from "./components/finalScreen";
 import { GameScreen } from "./components/gameScreen";
 import { MenuScreen } from "./components/menuScreen";
+import backgroundSong from "./assets/EfeitosSonoros/music_zapsplat_easy_cheesy.mp3";
+const backgroundMusica = new Audio(backgroundSong);
+backgroundMusica.loop = true;
+
 export function App() {
   let timerValue = 0;
   const [timer, setTimer] = useState(timerValue);
@@ -34,6 +38,7 @@ export function App() {
     );
   } else {
     if (timer >= 0) {
+      backgroundMusica.play();
       return (
         <div className="text-slate-50 font-mainFont">
           <GameScreen
@@ -50,6 +55,7 @@ export function App() {
         </div>
       );
     } else {
+      backgroundMusica.pause();
       return (
         <div className="text-slate-50 font-mainFont">
           <FinalScreen
