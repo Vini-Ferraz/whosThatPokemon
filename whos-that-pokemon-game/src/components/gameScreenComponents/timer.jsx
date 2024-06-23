@@ -1,5 +1,5 @@
 //A React component to display and manage the game timer.
-//It decrements the timer value every second and formats it.
+//It decrements the timer value every second and formats it
 
 import { useEffect } from "react";
 
